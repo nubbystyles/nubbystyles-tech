@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nubbystyles Technologies</title>
 
@@ -12,6 +12,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -22,7 +23,7 @@
     body{
       font-family:'Poppins', sans-serif;
       background:#050816;
-      color:#fff;
+      color:white;
       overflow-x:hidden;
     }
 
@@ -31,25 +32,45 @@
       color:white;
     }
 
+    img{
+      max-width:100%;
+    }
+
     /* NAVBAR */
+
     nav{
       width:100%;
+      padding:20px 8%;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:20px 8%;
       position:fixed;
       top:0;
       z-index:1000;
-      backdrop-filter: blur(12px);
-      background:rgba(5,8,22,0.6);
+      backdrop-filter:blur(14px);
+      background:rgba(5,8,22,0.7);
       border-bottom:1px solid rgba(255,255,255,0.08);
     }
 
     .logo{
-      font-size:1.5rem;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size:1.4rem;
       font-weight:700;
       color:#00d2ff;
+    }
+
+    .logo-icon{
+      width:40px;
+      height:40px;
+      border-radius:12px;
+      background:linear-gradient(135deg,#00d2ff,#3a7bd5);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:bold;
+      color:white;
     }
 
     nav ul{
@@ -60,27 +81,34 @@
 
     nav ul li a{
       transition:0.3s;
+      font-size:0.95rem;
     }
 
     nav ul li a:hover{
       color:#00d2ff;
     }
 
-    .btn{
+    .nav-btn{
       padding:12px 24px;
       border-radius:30px;
-      background:linear-gradient(90deg,#00d2ff,#3a7bd5);
-      color:white;
+      background:linear-gradient(135deg,#00d2ff,#3a7bd5);
       font-weight:600;
-      transition:0.4s;
+      transition:0.3s;
     }
 
-    .btn:hover{
+    .nav-btn:hover{
       transform:translateY(-3px);
       box-shadow:0 10px 25px rgba(0,210,255,0.3);
     }
 
+    .menu-btn{
+      display:none;
+      font-size:2rem;
+      cursor:pointer;
+    }
+
     /* HERO */
+
     .hero{
       min-height:100vh;
       display:flex;
@@ -99,20 +127,71 @@
       margin-bottom:20px;
     }
 
-    .hero-content span{
+    .hero-content h1 span{
       color:#00d2ff;
     }
 
     .hero-content p{
-      max-width:700px;
+      max-width:750px;
       margin:auto;
+      line-height:1.9;
       color:#c7c7c7;
-      line-height:1.8;
       margin-bottom:40px;
     }
 
+    .hero-buttons{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:15px 30px;
+      border-radius:40px;
+      font-weight:600;
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .primary-btn{
+      background:linear-gradient(135deg,#00d2ff,#3a7bd5);
+    }
+
+    .secondary-btn{
+      border:1px solid rgba(255,255,255,0.2);
+    }
+
+    .btn:hover{
+      transform:translateY(-4px);
+    }
+
+    /* STATS */
+
+    .stats{
+      padding:40px 8%;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:25px;
+    }
+
+    .stat-box{
+      background:rgba(255,255,255,0.04);
+      border-radius:20px;
+      padding:30px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,0.05);
+    }
+
+    .stat-box h2{
+      color:#00d2ff;
+      margin-bottom:10px;
+      font-size:2rem;
+    }
+
     /* SERVICES */
-    .services{
+
+    section{
       padding:100px 8%;
     }
 
@@ -122,36 +201,38 @@
     }
 
     .section-title h2{
-      font-size:2.5rem;
+      font-size:2.8rem;
       margin-bottom:15px;
     }
 
     .section-title p{
       color:#aaa;
+      max-width:700px;
+      margin:auto;
     }
 
-    .service-grid{
+    .services-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
       gap:25px;
     }
 
     .service-card{
-      background:rgba(255,255,255,0.05);
+      background:rgba(255,255,255,0.04);
       padding:35px;
-      border-radius:20px;
+      border-radius:25px;
       transition:0.4s;
-      border:1px solid rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.06);
     }
 
     .service-card:hover{
       transform:translateY(-10px);
       border-color:#00d2ff;
-      box-shadow:0 10px 40px rgba(0,210,255,0.15);
+      box-shadow:0 10px 35px rgba(0,210,255,0.15);
     }
 
     .service-card i{
-      font-size:2.5rem;
+      font-size:2.8rem;
       color:#00d2ff;
       margin-bottom:20px;
     }
@@ -162,12 +243,12 @@
 
     .service-card p{
       color:#bbb;
-      line-height:1.7;
+      line-height:1.8;
     }
 
     /* ABOUT */
+
     .about{
-      padding:100px 8%;
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
       gap:50px;
@@ -175,37 +256,56 @@
     }
 
     .about img{
-      width:100%;
-      border-radius:25px;
+      border-radius:30px;
     }
 
     .about-text h2{
-      font-size:2.5rem;
+      font-size:2.8rem;
       margin-bottom:20px;
     }
 
     .about-text p{
-      color:#bcbcbc;
+      color:#bbb;
       line-height:1.9;
-      margin-bottom:25px;
+      margin-bottom:20px;
+    }
+
+    /* WHY US */
+
+    .why-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .why-card{
+      background:rgba(255,255,255,0.04);
+      padding:30px;
+      border-radius:20px;
+    }
+
+    .why-card h3{
+      margin-bottom:15px;
+      color:#00d2ff;
     }
 
     /* CTA */
+
     .cta{
-      margin:80px 8%;
+      margin:0 8% 100px;
       padding:70px;
-      border-radius:30px;
+      border-radius:35px;
       text-align:center;
       background:linear-gradient(135deg,#00d2ff,#3a7bd5);
     }
 
     .cta h2{
-      font-size:2.5rem;
+      font-size:2.8rem;
       margin-bottom:20px;
     }
 
     .cta p{
-      margin-bottom:30px;
+      margin-bottom:35px;
     }
 
     .cta .btn{
@@ -214,43 +314,154 @@
     }
 
     /* FOOTER */
+
     footer{
-      padding:40px 8%;
-      text-align:center;
+      padding:50px 8%;
       border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:40px;
+    }
+
+    footer h3{
+      margin-bottom:20px;
+      color:#00d2ff;
+    }
+
+    footer p,
+    footer a{
       color:#aaa;
+      line-height:2;
     }
 
     .socials{
       margin-top:20px;
       display:flex;
-      justify-content:center;
-      gap:20px;
+      gap:15px;
     }
 
     .socials a{
-      font-size:1.4rem;
+      width:45px;
+      height:45px;
+      border-radius:50%;
+      background:rgba(255,255,255,0.06);
+      display:flex;
+      align-items:center;
+      justify-content:center;
       transition:0.3s;
     }
 
     .socials a:hover{
-      color:#00d2ff;
+      background:#00d2ff;
+    }
+
+    .copyright{
+      text-align:center;
+      margin-top:50px;
+      color:#777;
+    }
+
+    /* WHATSAPP */
+
+    .whatsapp{
+      position:fixed;
+      bottom:25px;
+      right:25px;
+      width:65px;
+      height:65px;
+      border-radius:50%;
+      background:#25d366;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2rem;
+      z-index:999;
+      box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    /* CONTACT MODAL */
+
+    .modal{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.7);
+      display:none;
+      justify-content:center;
+      align-items:center;
+      z-index:2000;
+      padding:20px;
+    }
+
+    .modal-content{
+      background:#0d1327;
+      width:100%;
+      max-width:500px;
+      padding:40px;
+      border-radius:25px;
+      position:relative;
+    }
+
+    .close{
+      position:absolute;
+      top:15px;
+      right:20px;
+      font-size:2rem;
+      cursor:pointer;
+    }
+
+    .modal-content h2{
+      margin-bottom:25px;
+    }
+
+    .modal-content input,
+    .modal-content textarea{
+      width:100%;
+      padding:15px;
+      margin-bottom:20px;
+      border:none;
+      border-radius:12px;
+      background:rgba(255,255,255,0.06);
+      color:white;
+      font-family:Poppins;
+    }
+
+    .modal-content button{
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius:30px;
+      background:linear-gradient(135deg,#00d2ff,#3a7bd5);
+      color:white;
+      font-weight:600;
+      cursor:pointer;
     }
 
     /* RESPONSIVE */
-    @media(max-width:768px){
 
-      .hero-content h1{
-        font-size:2.5rem;
-      }
+    @media(max-width:900px){
 
       nav ul{
         display:none;
       }
 
+      .menu-btn{
+        display:block;
+      }
+
+      .hero-content h1{
+        font-size:2.7rem;
+      }
+
       .cta{
         padding:40px 20px;
       }
+
     }
 
   </style>
@@ -258,127 +469,343 @@
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo">Nubbystyles Tech</div>
+<!-- NAVBAR -->
 
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
+<nav>
 
-    <a href="#contact" class="btn">Contact Us</a>
-  </nav>
+  <div class="logo">
+    <div class="logo-icon">N</div>
+    Nubbystyles Tech
+  </div>
 
-  <!-- HERO -->
-  <section class="hero">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#why">Why Us</a></li>
+  </ul>
 
-    <div class="hero-content">
-      <h1>We Build <span>Digital Experiences</span> That Drive Growth</h1>
+  <a href="#" class="nav-btn" onclick="openModal()">Contact Us</a>
 
-      <p>
-        Nubbystyles Technologies helps brands and businesses grow online through
-        modern web development, design, content creation, and digital solutions.
-      </p>
+  <div class="menu-btn">
+    <i class="ri-menu-line"></i>
+  </div>
 
-      <a href="#services" class="btn">Explore Services</a>
-    </div>
+</nav>
 
-  </section>
+<!-- HERO -->
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
+<section class="hero">
 
-    <div class="section-title">
-      <h2>Our Services</h2>
-      <p>Premium digital solutions tailored for modern businesses.</p>
-    </div>
+  <div class="hero-content">
 
-    <div class="service-grid">
-
-      <div class="service-card">
-        <i class="ri-code-s-slash-line"></i>
-        <h3>Web Development</h3>
-        <p>Modern, responsive, and fast websites built with clean code and premium user experience.</p>
-      </div>
-
-      <div class="service-card">
-        <i class="ri-palette-line"></i>
-        <h3>Graphic Design</h3>
-        <p>Creative branding, social media graphics, logos, and visual assets that stand out.</p>
-      </div>
-
-      <div class="service-card">
-        <i class="ri-article-line"></i>
-        <h3>Content Writing</h3>
-        <p>SEO-friendly blog posts, news articles, and engaging content crafted for visibility.</p>
-      </div>
-
-      <div class="service-card">
-        <i class="ri-megaphone-line"></i>
-        <h3>Social Media</h3>
-        <p>Strategic social media management and digital marketing for audience growth.</p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-
-    <div>
-      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="Tech Team">
-    </div>
-
-    <div class="about-text">
-      <h2>About Nubbystyles Technologies</h2>
-
-      <p>
-        We are a modern digital agency focused on helping startups, creators,
-        and businesses establish a strong online presence through technology,
-        creativity, and innovation.
-      </p>
-
-      <p>
-        Our mission is to provide affordable and premium digital services that
-        empower brands to grow faster in the modern digital world.
-      </p>
-
-      <a href="#contact" class="btn">Work With Us</a>
-    </div>
-
-  </section>
-
-  <!-- CTA -->
-  <section class="cta" id="contact">
-
-    <h2>Let’s Build Something Amazing Together</h2>
+    <h1>
+      Building <span>Modern Digital Solutions</span> For Businesses Worldwide
+    </h1>
 
     <p>
-      Ready to take your business online with modern digital solutions?
+      Nubbystyles Technologies is a premium digital agency helping businesses,
+      startups, and creators establish powerful online identities through
+      modern web development, creative branding, digital marketing,
+      and innovative technology solutions.
     </p>
 
-    <a href="mailto:nubbystylesintl@gmail.com" class="btn">
-      Contact Now
-    </a>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-
-    <p>© 2026 Nubbystyles Technologies. All Rights Reserved.</p>
-
-    <div class="socials">
-      <a href="#"><i class="ri-facebook-fill"></i></a>
-      <a href="#"><i class="ri-instagram-line"></i></a>
-      <a href="#"><i class="ri-twitter-x-line"></i></a>
-      <a href="#"><i class="ri-linkedin-fill"></i></a>
+    <div class="hero-buttons">
+      <a href="#services" class="btn primary-btn">Explore Services</a>
+      <a href="#" onclick="openModal()" class="btn secondary-btn">Get Started</a>
     </div>
 
-  </footer>
+  </div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+  <div class="stat-box">
+    <h2>20+</h2>
+    <p>Projects Completed</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>24/7</h2>
+    <p>Support Availability</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>100%</h2>
+    <p>Client Focused</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>Creative</h2>
+    <p>Digital Solutions</p>
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+  <div class="section-title">
+    <h2>Our Services</h2>
+
+    <p>
+      We provide cutting-edge digital services designed to help brands,
+      businesses, and startups grow in the modern digital landscape.
+    </p>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <i class="ri-code-s-slash-line"></i>
+      <h3>Web Development</h3>
+      <p>
+        Responsive, modern, and high-performance websites built with clean code
+        and premium user experiences.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <i class="ri-palette-line"></i>
+      <h3>Graphic Design</h3>
+      <p>
+        Creative visual branding, social media graphics, logos, and stunning
+        digital designs that capture attention.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <i class="ri-article-line"></i>
+      <h3>Content Writing</h3>
+      <p>
+        SEO-optimized blog posts, website content, and engaging articles crafted
+        for visibility and audience engagement.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <i class="ri-megaphone-line"></i>
+      <h3>Digital Marketing</h3>
+      <p>
+        Strategic social media management and online marketing solutions that
+        help brands reach wider audiences.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+  <div>
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="">
+  </div>
+
+  <div class="about-text">
+
+    <h2>About Nubbystyles Technologies</h2>
+
+    <p>
+      Nubbystyles Technologies is a forward-thinking digital agency dedicated
+      to helping businesses establish strong and impactful online identities.
+      We combine creativity, innovation, and technology to deliver digital
+      solutions that drive growth and visibility.
+    </p>
+
+    <p>
+      From premium website development and branding to content strategy and
+      digital marketing, our mission is to empower businesses with modern tools
+      needed to succeed in today's competitive digital world.
+    </p>
+
+    <p>
+      We believe every business deserves a powerful online presence, and we are
+      committed to delivering affordable, professional, and result-driven
+      digital services to clients globally.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- WHY US -->
+
+<section id="why">
+
+  <div class="section-title">
+    <h2>Why Choose Us</h2>
+
+    <p>
+      We focus on quality, innovation, and customer satisfaction in every project.
+    </p>
+  </div>
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <h3>Modern Technology</h3>
+      <p>
+        We use modern tools and technologies to build fast, responsive,
+        and scalable digital solutions.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <h3>Affordable Pricing</h3>
+      <p>
+        Premium-quality services delivered at competitive and business-friendly rates.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <h3>Client Focused</h3>
+      <p>
+        We prioritize communication, reliability, and customer satisfaction in every project.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+  <h2>Ready To Grow Your Business Online?</h2>
+
+  <p>
+    Let’s help you build a powerful digital presence with modern technology and creative solutions.
+  </p>
+
+  <a href="#" onclick="openModal()" class="btn">
+    Contact Us
+  </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-grid">
+
+    <div>
+      <h3>Nubbystyles Tech</h3>
+
+      <p>
+        Delivering modern digital solutions for startups,
+        creators, and businesses worldwide.
+      </p>
+
+      <div class="socials">
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-twitter-x-line"></i></a>
+        <a href="#"><i class="ri-linkedin-fill"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <h3>Services</h3>
+
+      <p><a href="#">Web Development</a></p>
+      <p><a href="#">Graphic Design</a></p>
+      <p><a href="#">Content Writing</a></p>
+      <p><a href="#">Digital Marketing</a></p>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+
+      <p>Email: nubbystylesintl@gmail.com</p>
+      <p>Phone: +234 806 680 9999</p>
+      <p>Nigeria</p>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 Nubbystyles Technologies. All Rights Reserved.
+  </div>
+
+</footer>
+
+<!-- WHATSAPP -->
+
+<a
+href="https://wa.me/2348066809999"
+class="whatsapp"
+target="_blank">
+
+<i class="ri-whatsapp-line"></i>
+
+</a>
+
+<!-- CONTACT MODAL -->
+
+<div class="modal" id="contactModal">
+
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h2>Contact Us</h2>
+
+    <form
+    action="https://formsubmit.co/nubbystylesintl@gmail.com"
+    method="POST">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <input type="text" name="service" placeholder="Service Needed">
+
+      <textarea
+      name="message"
+      rows="5"
+      placeholder="Your Message"
+      required></textarea>
+
+      <button type="submit">
+        Send Message
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<!-- SCRIPT -->
+
+<script>
+
+  const modal = document.getElementById("contactModal");
+
+  function openModal(){
+    modal.style.display = "flex";
+  }
+
+  function closeModal(){
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(e){
+    if(e.target == modal){
+      modal.style.display = "none";
+    }
+  }
+
+</script>
 
 </body>
 </html>
