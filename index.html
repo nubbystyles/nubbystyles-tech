@@ -1,518 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Nubbystyles Technologies</title>
 
+  <meta
+  name="description"
+  content="Nubbystyles Technologies delivers modern web development, branding, content writing, and digital solutions for businesses worldwide."/>
+
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet">
 
   <!-- Remix Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link
+  href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+  rel="stylesheet">
 
-  <style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
-
-    body{
-      font-family:'Poppins', sans-serif;
-      background:#050816;
-      color:white;
-      overflow-x:hidden;
-    }
-
-    a{
-      text-decoration:none;
-      color:white;
-    }
-
-    img{
-      max-width:100%;
-    }
-
-    /* NAVBAR */
-
-    nav{
-      width:100%;
-      padding:20px 8%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      position:fixed;
-      top:0;
-      z-index:1000;
-      backdrop-filter:blur(14px);
-      background:rgba(5,8,22,0.7);
-      border-bottom:1px solid rgba(255,255,255,0.08);
-    }
-
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-size:1.4rem;
-      font-weight:700;
-      color:#00d2ff;
-    }
-
-    .logo-icon{
-      width:40px;
-      height:40px;
-      border-radius:12px;
-      background:linear-gradient(135deg,#00d2ff,#3a7bd5);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:bold;
-      color:white;
-    }
-
-    nav ul{
-      display:flex;
-      gap:30px;
-      list-style:none;
-    }
-
-    nav ul li a{
-      transition:0.3s;
-      font-size:0.95rem;
-    }
-
-    nav ul li a:hover{
-      color:#00d2ff;
-    }
-
-    .nav-btn{
-      padding:12px 24px;
-      border-radius:30px;
-      background:linear-gradient(135deg,#00d2ff,#3a7bd5);
-      font-weight:600;
-      transition:0.3s;
-    }
-
-    .nav-btn:hover{
-      transform:translateY(-3px);
-      box-shadow:0 10px 25px rgba(0,210,255,0.3);
-    }
-
-    .menu-btn{
-      display:none;
-      font-size:2rem;
-      cursor:pointer;
-    }
-
-    /* HERO */
-
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:0 10%;
-      background:
-      radial-gradient(circle at top left,#1d2b64 0%,transparent 40%),
-      radial-gradient(circle at bottom right,#0f2027 0%,transparent 40%);
-    }
-
-    .hero-content h1{
-      font-size:4rem;
-      line-height:1.2;
-      margin-bottom:20px;
-    }
-
-    .hero-content h1 span{
-      color:#00d2ff;
-    }
-
-    .hero-content p{
-      max-width:750px;
-      margin:auto;
-      line-height:1.9;
-      color:#c7c7c7;
-      margin-bottom:40px;
-    }
-
-    .hero-buttons{
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      padding:15px 30px;
-      border-radius:40px;
-      font-weight:600;
-      transition:0.3s;
-      display:inline-block;
-    }
-
-    .primary-btn{
-      background:linear-gradient(135deg,#00d2ff,#3a7bd5);
-    }
-
-    .secondary-btn{
-      border:1px solid rgba(255,255,255,0.2);
-    }
-
-    .btn:hover{
-      transform:translateY(-4px);
-    }
-
-    /* STATS */
-
-    .stats{
-      padding:40px 8%;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:25px;
-    }
-
-    .stat-box{
-      background:rgba(255,255,255,0.04);
-      border-radius:20px;
-      padding:30px;
-      text-align:center;
-      border:1px solid rgba(255,255,255,0.05);
-    }
-
-    .stat-box h2{
-      color:#00d2ff;
-      margin-bottom:10px;
-      font-size:2rem;
-    }
-
-    /* SERVICES */
-
-    section{
-      padding:100px 8%;
-    }
-
-    .section-title{
-      text-align:center;
-      margin-bottom:60px;
-    }
-
-    .section-title h2{
-      font-size:2.8rem;
-      margin-bottom:15px;
-    }
-
-    .section-title p{
-      color:#aaa;
-      max-width:700px;
-      margin:auto;
-    }
-
-    .services-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-    }
-
-    .service-card{
-      background:rgba(255,255,255,0.04);
-      padding:35px;
-      border-radius:25px;
-      transition:0.4s;
-      border:1px solid rgba(255,255,255,0.06);
-    }
-
-    .service-card:hover{
-      transform:translateY(-10px);
-      border-color:#00d2ff;
-      box-shadow:0 10px 35px rgba(0,210,255,0.15);
-    }
-
-    .service-card i{
-      font-size:2.8rem;
-      color:#00d2ff;
-      margin-bottom:20px;
-    }
-
-    .service-card h3{
-      margin-bottom:15px;
-    }
-
-    .service-card p{
-      color:#bbb;
-      line-height:1.8;
-    }
-
-    /* ABOUT */
-
-    .about{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:50px;
-      align-items:center;
-    }
-
-    .about img{
-      border-radius:30px;
-    }
-
-    .about-text h2{
-      font-size:2.8rem;
-      margin-bottom:20px;
-    }
-
-    .about-text p{
-      color:#bbb;
-      line-height:1.9;
-      margin-bottom:20px;
-    }
-
-    /* WHY US */
-
-    .why-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-    }
-
-    .why-card{
-      background:rgba(255,255,255,0.04);
-      padding:30px;
-      border-radius:20px;
-    }
-
-    .why-card h3{
-      margin-bottom:15px;
-      color:#00d2ff;
-    }
-
-    /* CTA */
-
-    .cta{
-      margin:0 8% 100px;
-      padding:70px;
-      border-radius:35px;
-      text-align:center;
-      background:linear-gradient(135deg,#00d2ff,#3a7bd5);
-    }
-
-    .cta h2{
-      font-size:2.8rem;
-      margin-bottom:20px;
-    }
-
-    .cta p{
-      margin-bottom:35px;
-    }
-
-    .cta .btn{
-      background:white;
-      color:#111;
-    }
-
-    /* FOOTER */
-
-    footer{
-      padding:50px 8%;
-      border-top:1px solid rgba(255,255,255,0.08);
-    }
-
-    .footer-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:40px;
-    }
-
-    footer h3{
-      margin-bottom:20px;
-      color:#00d2ff;
-    }
-
-    footer p,
-    footer a{
-      color:#aaa;
-      line-height:2;
-    }
-
-    .socials{
-      margin-top:20px;
-      display:flex;
-      gap:15px;
-    }
-
-    .socials a{
-      width:45px;
-      height:45px;
-      border-radius:50%;
-      background:rgba(255,255,255,0.06);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      transition:0.3s;
-    }
-
-    .socials a:hover{
-      background:#00d2ff;
-    }
-
-    .copyright{
-      text-align:center;
-      margin-top:50px;
-      color:#777;
-    }
-
-    /* WHATSAPP */
-
-    .whatsapp{
-      position:fixed;
-      bottom:25px;
-      right:25px;
-      width:65px;
-      height:65px;
-      border-radius:50%;
-      background:#25d366;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:2rem;
-      z-index:999;
-      box-shadow:0 10px 25px rgba(0,0,0,0.3);
-    }
-
-    /* CONTACT MODAL */
-
-    .modal{
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      background:rgba(0,0,0,0.7);
-      display:none;
-      justify-content:center;
-      align-items:center;
-      z-index:2000;
-      padding:20px;
-    }
-
-    .modal-content{
-      background:#0d1327;
-      width:100%;
-      max-width:500px;
-      padding:40px;
-      border-radius:25px;
-      position:relative;
-    }
-
-    .close{
-      position:absolute;
-      top:15px;
-      right:20px;
-      font-size:2rem;
-      cursor:pointer;
-    }
-
-    .modal-content h2{
-      margin-bottom:25px;
-    }
-
-    .modal-content input,
-    .modal-content textarea{
-      width:100%;
-      padding:15px;
-      margin-bottom:20px;
-      border:none;
-      border-radius:12px;
-      background:rgba(255,255,255,0.06);
-      color:white;
-      font-family:Poppins;
-    }
-
-    .modal-content button{
-      width:100%;
-      padding:15px;
-      border:none;
-      border-radius:30px;
-      background:linear-gradient(135deg,#00d2ff,#3a7bd5);
-      color:white;
-      font-weight:600;
-      cursor:pointer;
-    }
-
-    /* RESPONSIVE */
-
-    @media(max-width:900px){
-
-      nav ul{
-        display:none;
-      }
-
-      .menu-btn{
-        display:block;
-      }
-
-      .hero-content h1{
-        font-size:2.7rem;
-      }
-
-      .cta{
-        padding:40px 20px;
-      }
-
-    }
-
-  </style>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 
-<nav>
+<nav class="navbar">
 
   <div class="logo">
-    <div class="logo-icon">N</div>
-    Nubbystyles Tech
+
+    <div class="logo-box">
+      N
+    </div>
+
+    <span>Nubbystyles Tech</span>
+
   </div>
 
-  <ul>
+  <ul class="nav-links">
+
     <li><a href="#">Home</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#why">Why Us</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+
   </ul>
 
-  <a href="#" class="nav-btn" onclick="openModal()">Contact Us</a>
+  <button class="contact-btn" onclick="openModal()">
+    Contact Us
+  </button>
 
-  <div class="menu-btn">
+  <div class="menu-btn" id="menuBtn">
     <i class="ri-menu-line"></i>
   </div>
 
 </nav>
 
+<!-- MOBILE MENU -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+  <a href="#">Home</a>
+  <a href="#services">Services</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#about">About</a>
+  <a href="#testimonials">Testimonials</a>
+
+</div>
+
 <!-- HERO -->
 
 <section class="hero">
 
-  <div class="hero-content">
+  <div class="hero-content reveal">
 
     <h1>
-      Building <span>Modern Digital Solutions</span> For Businesses Worldwide
+      Building <span>Premium Digital Experiences</span>
+      For Modern Brands
     </h1>
 
     <p>
-      Nubbystyles Technologies is a premium digital agency helping businesses,
-      startups, and creators establish powerful online identities through
-      modern web development, creative branding, digital marketing,
-      and innovative technology solutions.
+      Nubbystyles Technologies helps businesses, startups,
+      and creators establish strong online identities through
+      modern web development, branding, content creation,
+      and innovative digital solutions.
     </p>
 
     <div class="hero-buttons">
-      <a href="#services" class="btn primary-btn">Explore Services</a>
-      <a href="#" onclick="openModal()" class="btn secondary-btn">Get Started</a>
+
+      <a href="#services" class="primary-btn">
+        Explore Services
+      </a>
+
+      <a href="#" class="secondary-btn" onclick="openModal()">
+        Start Project
+      </a>
+
     </div>
 
   </div>
@@ -521,16 +110,16 @@
 
 <!-- STATS -->
 
-<section class="stats">
+<section class="stats reveal">
 
   <div class="stat-box">
     <h2>20+</h2>
-    <p>Projects Completed</p>
+    <p>Projects Delivered</p>
   </div>
 
   <div class="stat-box">
     <h2>24/7</h2>
-    <p>Support Availability</p>
+    <p>Client Support</p>
   </div>
 
   <div class="stat-box">
@@ -549,51 +138,143 @@
 
 <section id="services">
 
-  <div class="section-title">
+  <div class="section-title reveal">
+
     <h2>Our Services</h2>
 
     <p>
-      We provide cutting-edge digital services designed to help brands,
-      businesses, and startups grow in the modern digital landscape.
+      We deliver modern digital services designed to help businesses
+      grow and compete in today’s fast-changing digital world.
     </p>
+
   </div>
 
   <div class="services-grid">
 
-    <div class="service-card">
+    <div class="service-card reveal">
+
       <i class="ri-code-s-slash-line"></i>
+
       <h3>Web Development</h3>
+
       <p>
-        Responsive, modern, and high-performance websites built with clean code
-        and premium user experiences.
+        Responsive and modern websites built with clean code,
+        performance, and premium user experience.
       </p>
+
     </div>
 
-    <div class="service-card">
+    <div class="service-card reveal">
+
       <i class="ri-palette-line"></i>
+
       <h3>Graphic Design</h3>
+
       <p>
-        Creative visual branding, social media graphics, logos, and stunning
-        digital designs that capture attention.
+        Creative logos, branding, social media graphics,
+        and visual assets that elevate your brand.
       </p>
+
     </div>
 
-    <div class="service-card">
+    <div class="service-card reveal">
+
       <i class="ri-article-line"></i>
+
       <h3>Content Writing</h3>
+
       <p>
-        SEO-optimized blog posts, website content, and engaging articles crafted
-        for visibility and audience engagement.
+        SEO-friendly blog posts, articles, scripts,
+        and engaging content for modern audiences.
       </p>
+
     </div>
 
-    <div class="service-card">
+    <div class="service-card reveal">
+
       <i class="ri-megaphone-line"></i>
+
       <h3>Digital Marketing</h3>
+
       <p>
-        Strategic social media management and online marketing solutions that
-        help brands reach wider audiences.
+        Strategic online marketing and social media management
+        solutions that grow your audience.
       </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+
+  <div class="section-title reveal">
+
+    <h2>Featured Projects</h2>
+
+    <p>
+      Some of our recent creative and digital solutions.
+    </p>
+
+  </div>
+
+  <div class="portfolio-grid">
+
+    <div class="portfolio-card reveal">
+
+      <img
+      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
+      alt="">
+
+      <div class="portfolio-content">
+
+        <h3>Corporate Website</h3>
+
+        <p>
+          Premium business website development project.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="portfolio-card reveal">
+
+      <img
+      src="https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1200&auto=format&fit=crop"
+      alt="">
+
+      <div class="portfolio-content">
+
+        <h3>Brand Design</h3>
+
+        <p>
+          Modern visual identity and branding package.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="portfolio-card reveal">
+
+      <img
+      src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+      alt="">
+
+      <div class="portfolio-content">
+
+        <h3>Digital Campaign</h3>
+
+        <p>
+          Creative marketing and content strategy campaign.
+        </p>
+
+      </div>
+
     </div>
 
   </div>
@@ -602,73 +283,88 @@
 
 <!-- ABOUT -->
 
-<section id="about" class="about">
+<section id="about" class="about-section">
 
-  <div>
-    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="">
+  <div class="about-image reveal">
+
+    <img
+    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
+    alt="">
+
   </div>
 
-  <div class="about-text">
+  <div class="about-content reveal">
 
     <h2>About Nubbystyles Technologies</h2>
 
     <p>
-      Nubbystyles Technologies is a forward-thinking digital agency dedicated
-      to helping businesses establish strong and impactful online identities.
-      We combine creativity, innovation, and technology to deliver digital
-      solutions that drive growth and visibility.
+      Nubbystyles Technologies is a modern digital solutions company
+      focused on helping businesses establish strong and impactful
+      online identities through technology, creativity, and innovation.
     </p>
 
     <p>
-      From premium website development and branding to content strategy and
-      digital marketing, our mission is to empower businesses with modern tools
-      needed to succeed in today's competitive digital world.
+      Our mission is to provide premium digital services including
+      website development, branding, content creation,
+      and strategic digital marketing tailored for modern businesses.
     </p>
 
     <p>
-      We believe every business deserves a powerful online presence, and we are
-      committed to delivering affordable, professional, and result-driven
-      digital services to clients globally.
+      We believe every brand deserves a professional online presence,
+      and we are committed to delivering affordable,
+      scalable, and result-driven digital solutions globally.
     </p>
 
   </div>
 
 </section>
 
-<!-- WHY US -->
+<!-- TESTIMONIALS -->
 
-<section id="why">
+<section id="testimonials">
 
-  <div class="section-title">
-    <h2>Why Choose Us</h2>
+  <div class="section-title reveal">
+
+    <h2>Client Testimonials</h2>
 
     <p>
-      We focus on quality, innovation, and customer satisfaction in every project.
+      What clients say about our digital solutions and services.
     </p>
+
   </div>
 
-  <div class="why-grid">
+  <div class="testimonial-grid">
 
-    <div class="why-card">
-      <h3>Modern Technology</h3>
+    <div class="testimonial-card reveal">
+
       <p>
-        We use modern tools and technologies to build fast, responsive,
-        and scalable digital solutions.
+        “Professional, creative, and reliable.
+        The website delivered exceeded expectations.”
       </p>
+
+      <h4>— Business Client</h4>
+
     </div>
 
-    <div class="why-card">
-      <h3>Affordable Pricing</h3>
+    <div class="testimonial-card reveal">
+
       <p>
-        Premium-quality services delivered at competitive and business-friendly rates.
+        “Excellent communication and modern design quality.
+        Highly recommended.”
       </p>
+
+      <h4>— Startup Founder</h4>
+
     </div>
 
-    <div class="why-card">
-      <h3>Client Focused</h3>
+    <div class="testimonial-card reveal">
+
       <p>
-        We prioritize communication, reliability, and customer satisfaction in every project.
+        “Great digital marketing and branding support for our company.”
       </p>
+
+      <h4>— Agency Partner</h4>
+
     </div>
 
   </div>
@@ -677,17 +373,17 @@
 
 <!-- CTA -->
 
-<section class="cta">
+<section class="cta reveal">
 
-  <h2>Ready To Grow Your Business Online?</h2>
+  <h2>Ready To Build Your Digital Presence?</h2>
 
   <p>
-    Let’s help you build a powerful digital presence with modern technology and creative solutions.
+    Let’s help you create a modern and powerful online brand.
   </p>
 
-  <a href="#" onclick="openModal()" class="btn">
-    Contact Us
-  </a>
+  <button onclick="openModal()">
+    Start Your Project
+  </button>
 
 </section>
 
@@ -698,36 +394,35 @@
   <div class="footer-grid">
 
     <div>
+
       <h3>Nubbystyles Tech</h3>
 
       <p>
-        Delivering modern digital solutions for startups,
-        creators, and businesses worldwide.
+        Premium digital solutions for businesses,
+        startups, and creators worldwide.
       </p>
 
-      <div class="socials">
-        <a href="#"><i class="ri-facebook-fill"></i></a>
-        <a href="#"><i class="ri-instagram-line"></i></a>
-        <a href="#"><i class="ri-twitter-x-line"></i></a>
-        <a href="#"><i class="ri-linkedin-fill"></i></a>
-      </div>
     </div>
 
     <div>
+
       <h3>Services</h3>
 
-      <p><a href="#">Web Development</a></p>
-      <p><a href="#">Graphic Design</a></p>
-      <p><a href="#">Content Writing</a></p>
-      <p><a href="#">Digital Marketing</a></p>
+      <a href="#">Web Development</a>
+      <a href="#">Graphic Design</a>
+      <a href="#">Content Writing</a>
+      <a href="#">Digital Marketing</a>
+
     </div>
 
     <div>
+
       <h3>Contact</h3>
 
-      <p>Email: nubbystylesintl@gmail.com</p>
-      <p>Phone: +234 806 680 9999</p>
-      <p>Nigeria</p>
+      <p>hello@nubbystylestech.com.ng</p>
+      <p>business@nubbystylestech.com.ng</p>
+      <p>+234 806 680 9999</p>
+
     </div>
 
   </div>
@@ -757,7 +452,7 @@ target="_blank">
 
     <span class="close" onclick="closeModal()">&times;</span>
 
-    <h2>Contact Us</h2>
+    <h2>Start Your Project</h2>
 
     <form
     action="https://formsubmit.co/nubbystylesintl@gmail.com"
@@ -772,7 +467,7 @@ target="_blank">
       <textarea
       name="message"
       rows="5"
-      placeholder="Your Message"
+      placeholder="Tell us about your project"
       required></textarea>
 
       <button type="submit">
@@ -787,25 +482,7 @@ target="_blank">
 
 <!-- SCRIPT -->
 
-<script>
-
-  const modal = document.getElementById("contactModal");
-
-  function openModal(){
-    modal.style.display = "flex";
-  }
-
-  function closeModal(){
-    modal.style.display = "none";
-  }
-
-  window.onclick = function(e){
-    if(e.target == modal){
-      modal.style.display = "none";
-    }
-  }
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
