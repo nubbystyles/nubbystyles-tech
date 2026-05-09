@@ -452,3 +452,43 @@ footer a{
   color:white;
   cursor:pointer;
 }
+
+button{
+  transition:0.3s;
+}
+
+button:hover{
+  transform:translateY(-4px);
+}
+
+.portfolio-card{
+  overflow:hidden;
+}
+
+.portfolio-card img{
+  transition:0.5s;
+}
+
+.portfolio-card:hover img{
+  transform:scale(1.05);
+}
+
+.service-card,
+.portfolio-card,
+.stat-box{
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+.service-card:hover,
+.portfolio-card:hover{
+  border-color:#00d2ff;
+  box-shadow:0 10px 35px rgba(0,210,255,0.15);
+}
+
+.cta{
+  text-align:center;
+}
+
+.cta a{
+  display:inline-block;
+}
