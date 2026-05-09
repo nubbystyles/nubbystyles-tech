@@ -1,25 +1,13 @@
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("active");
-});
+if(menuBtn && mobileMenu){
 
-const modal = document.getElementById("contactModal");
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+  });
 
-function openModal(){
-  modal.style.display = "flex";
 }
-
-function closeModal(){
-  modal.style.display = "none";
-}
-
-window.onclick = function(e){
-  if(e.target == modal){
-    modal.style.display = "none";
-  }
-};
 
 function revealSections(){
 
