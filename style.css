@@ -413,3 +413,42 @@ footer a{
   }
 
 }
+
+.page-hero{
+  padding-top:160px;
+  text-align:center;
+}
+
+.page-hero h1{
+  font-size:3.5rem;
+  margin-bottom:20px;
+}
+
+.page-hero p{
+  color:#aaa;
+}
+
+.contact-box{
+  max-width:700px;
+  margin:auto;
+}
+
+.contact-box input,
+.contact-box textarea{
+  width:100%;
+  padding:15px;
+  margin-bottom:20px;
+  border:none;
+  border-radius:12px;
+  background:rgba(255,255,255,0.05);
+  color:white;
+}
+
+.contact-box button{
+  padding:15px 30px;
+  border:none;
+  border-radius:35px;
+  background:linear-gradient(135deg,#00d2ff,#3a7bd5);
+  color:white;
+  cursor:pointer;
+}
