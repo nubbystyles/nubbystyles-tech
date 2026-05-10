@@ -21,6 +21,8 @@ rel="stylesheet">
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav class="navbar">
 
 <div class="logo">
@@ -41,19 +43,188 @@ rel="stylesheet">
 
 </ul>
 
+<div class="menu-btn" id="menuBtn">
+
+<i class="ri-menu-3-line"></i>
+
+</div>
+
 </nav>
+
+<!-- MOBILE MENU -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+<!-- HERO -->
 
 <section class="page-hero">
 
-<h1>Contact Us</h1>
+<h1>Let’s Discuss Your Project</h1>
 
 <p>
-Let’s discuss your next digital project.
+Choose the reason for contacting us and we’ll direct your request appropriately.
 </p>
 
 </section>
 
+<!-- CONTACT OPTIONS -->
+
 <section>
+
+<div class="section-title reveal">
+
+<h2>Why Are You Contacting Us?</h2>
+
+<p>
+Select a category below to begin your request.
+</p>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card reveal contact-trigger"
+data-type="website">
+
+<i class="ri-code-box-line"></i>
+
+<h3>Website Development</h3>
+
+<p>
+Business websites, landing pages, web platforms, and digital solutions.
+</p>
+
+</div>
+
+<div class="service-card reveal contact-trigger"
+data-type="design">
+
+<i class="ri-palette-line"></i>
+
+<h3>Graphic Design</h3>
+
+<p>
+Logos, branding, flyers, banners, and visual identity systems.
+</p>
+
+</div>
+
+<div class="service-card reveal contact-trigger"
+data-type="writing">
+
+<i class="ri-article-line"></i>
+
+<h3>Content Writing</h3>
+
+<p>
+SEO articles, scripts, website copywriting, and digital content creation.
+</p>
+
+</div>
+
+<div class="service-card reveal contact-trigger"
+data-type="marketing">
+
+<i class="ri-megaphone-line"></i>
+
+<h3>Social Media Marketing</h3>
+
+<p>
+Audience growth, online visibility, and digital campaign strategies.
+</p>
+
+</div>
+
+<div class="service-card reveal contact-trigger"
+data-type="business">
+
+<i class="ri-line-chart-line"></i>
+
+<h3>Business Development</h3>
+
+<p>
+Digital growth strategies and business-focused online solutions.
+</p>
+
+</div>
+
+<div class="service-card reveal contact-trigger"
+data-type="partnership">
+
+<i class="ri-handshake-line"></i>
+
+<h3>Business Partnership</h3>
+
+<p>
+Partnerships, collaborations, and strategic opportunities.
+</p>
+
+</div>
+
+<div class="service-card reveal contact-trigger"
+data-type="support">
+
+<i class="ri-customer-service-2-line"></i>
+
+<h3>Technical Support</h3>
+
+<p>
+Support requests, technical guidance, and client assistance.
+</p>
+
+</div>
+
+<div class="service-card reveal contact-trigger"
+data-type="complaint">
+
+<i class="ri-error-warning-line"></i>
+
+<h3>Complaint / Feedback</h3>
+
+<p>
+Complaints, concerns, or service feedback submissions.
+</p>
+
+</div>
+
+<div class="service-card reveal contact-trigger"
+data-type="general">
+
+<i class="ri-chat-3-line"></i>
+
+<h3>General Inquiry</h3>
+
+<p>
+General questions or inquiries regarding our services.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT INFO -->
+
+<section>
+
+<div class="section-title reveal">
+
+<h2>Other Contact Information</h2>
+
+<p>
+You can also reach us directly through the channels below.
+</p>
+
+</div>
 
 <div class="services-grid">
 
@@ -61,7 +232,7 @@ Let’s discuss your next digital project.
 
 <i class="ri-mail-line"></i>
 
-<h3>Email</h3>
+<h3>Email Address</h3>
 
 <p>
 hello@nubbystylestech.com.ng
@@ -83,15 +254,17 @@ business@nubbystylestech.com.ng
 +234 806 680 9999
 </p>
 
-<a
-href="https://wa.me/2348066809999"
-target="_blank">
+</div>
 
-<button style="margin-top:20px;">
-Chat Now
-</button>
+<div class="service-card reveal">
 
-</a>
+<i class="ri-time-line"></i>
+
+<h3>Response Time</h3>
+
+<p>
+We typically respond within 24 hours.
+</p>
 
 </div>
 
@@ -99,48 +272,207 @@ Chat Now
 
 </section>
 
-<section>
+<!-- MODAL -->
 
-<div class="contact-box reveal">
+<div class="contact-modal" id="contactModal">
+
+<div class="modal-box">
+
+<div class="modal-header">
+
+<h2 id="modalTitle">Contact Form</h2>
+
+<i class="ri-close-line" id="closeModal"></i>
+
+</div>
 
 <form
+id="dynamicForm"
 action="https://formsubmit.co/nubbystylesintl@gmail.com"
 method="POST">
 
-<input
-type="text"
-name="name"
-placeholder="Your Name"
-required>
+<div id="formFields">
 
-<input
-type="email"
-name="email"
-placeholder="Your Email"
-required>
-
-<input
-type="text"
-name="service"
-placeholder="Service Needed">
-
-<textarea
-name="message"
-rows="6"
-placeholder="Tell us about your project"
-required></textarea>
+</div>
 
 <button type="submit">
-Send Message
+Submit Request
 </button>
 
 </form>
 
 </div>
 
+</div>
+
+<!-- CTA -->
+
+<section class="cta reveal">
+
+<h2>Ready To Start Something Great?</h2>
+
+<p>
+Let’s help you build a modern and impactful digital presence.
+</p>
+
+<a href="services.html">
+
+<button>
+Explore Our Services
+</button>
+
+</a>
+
 </section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>Nubbystyles Tech</h3>
+
+<p>
+Premium digital solutions helping businesses establish powerful online identities.
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Portfolio</a>
+
+</div>
+
+<div>
+
+<h3>Business Contact</h3>
+
+<p>hello@nubbystylestech.com.ng</p>
+<p>business@nubbystylestech.com.ng</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 Nubbystyles Technologies. All Rights Reserved.
+</div>
+
+</footer>
 
 <script src="script.js"></script>
 
 </body>
 </html>
+
+/* CONTACT MODAL */
+
+.contact-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.75);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  opacity:0;
+  visibility:hidden;
+  transition:0.4s;
+  z-index:2000;
+}
+
+.contact-modal.active{
+  opacity:1;
+  visibility:visible;
+}
+
+.modal-box{
+  width:100%;
+  max-width:650px;
+  background:rgba(13,19,39,0.96);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:30px;
+  padding:35px;
+  transform:translateY(40px);
+  transition:0.4s;
+  backdrop-filter:blur(20px);
+}
+
+.contact-modal.active .modal-box{
+  transform:translateY(0);
+}
+
+.modal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+.modal-header h2{
+  font-size:2rem;
+}
+
+.modal-header i{
+  font-size:2rem;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.modal-header i:hover{
+  color:#00d2ff;
+}
+
+#dynamicForm input,
+#dynamicForm textarea,
+#dynamicForm select{
+  width:100%;
+  padding:16px;
+  margin-bottom:20px;
+  border:none;
+  border-radius:14px;
+  background:rgba(255,255,255,0.05);
+  color:white;
+  font-family:'Poppins',sans-serif;
+}
+
+#dynamicForm input:focus,
+#dynamicForm textarea:focus,
+#dynamicForm select:focus{
+  outline:none;
+  border:1px solid #00d2ff;
+}
+
+#dynamicForm textarea{
+  min-height:140px;
+  resize:vertical;
+}
+
+.contact-trigger{
+  cursor:pointer;
+}
+
+.contact-trigger:hover{
+  transform:translateY(-10px);
+}
+
+@media(max-width:650px){
+
+  .modal-box{
+    padding:25px;
+  }
+
+  .modal-header h2{
+    font-size:1.5rem;
+  }
+
+}
+
