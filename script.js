@@ -50,6 +50,8 @@ const formFields = document.getElementById("formFields");
 
 const closeModal = document.getElementById("closeModal");
 
+if(modal && modalTitle && formFields){
+
 const formTemplates = {
 
 website: `
@@ -177,3 +179,5 @@ modal.classList.remove("active");
 }
 
 });
+  
+}
