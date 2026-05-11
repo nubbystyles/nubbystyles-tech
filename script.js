@@ -1,3 +1,5 @@
+/* MOBILE MENU */
+
 const menuBtn = document.getElementById("menuBtn");
 
 const mobileMenu = document.getElementById("mobileMenu");
@@ -11,6 +13,8 @@ if(menuBtn && mobileMenu){
   });
 
 }
+
+/* REVEAL ANIMATION */
 
 function revealSections(){
 
@@ -50,7 +54,13 @@ const formFields = document.getElementById("formFields");
 
 const closeModal = document.getElementById("closeModal");
 
-if(modal && modalTitle && formFields){
+if(
+  triggers.length > 0 &&
+  modal &&
+  modalTitle &&
+  formFields &&
+  closeModal
+){
 
 const formTemplates = {
 
@@ -160,15 +170,11 @@ formFields.innerHTML = formTemplates[type];
 
 });
 
-if(closeModal){
-
 closeModal.addEventListener("click", () => {
 
 modal.classList.remove("active");
 
 });
-
-}
 
 window.addEventListener("click", (e) => {
 
@@ -179,5 +185,5 @@ modal.classList.remove("active");
 }
 
 });
-  
+
 }
