@@ -187,3 +187,44 @@ modal.classList.remove("active");
 });
 
 }
+
+/* FEEDBACK MODAL */
+
+const feedbackModal =
+document.getElementById("feedbackModal");
+
+const openFeedback =
+document.getElementById("openFeedback");
+
+const closeFeedback =
+document.getElementById("closeFeedback");
+
+if(
+feedbackModal &&
+openFeedback &&
+closeFeedback
+){
+
+openFeedback.addEventListener("click", () => {
+
+feedbackModal.classList.add("active");
+
+});
+
+closeFeedback.addEventListener("click", () => {
+
+feedbackModal.classList.remove("active");
+
+});
+
+window.addEventListener("click", (e) => {
+
+if(e.target === feedbackModal){
+
+feedbackModal.classList.remove("active");
+
+}
+
+});
+
+}
